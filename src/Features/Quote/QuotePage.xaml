@@ -4,9 +4,9 @@
 	<ContentPage.Content>
 		<StackLayout Padding="15">
 			<Label Text="Quote Amount" ></Label>
-			<Entry Text="{Binding Quote.Total}"></Entry>
+			<Entry Text="{Binding Quote.Total, Mode=TwoWay}"></Entry>
 			<Label Text="Customer Name" ></Label>
-			<Entry Text="{Binding Quote.CustomerName}"></Entry>
+			<Entry Text="{Binding Quote.CustomerName, Mode=TwoWay}"></Entry>
 			<Button Text="Save" Command="{Binding SaveCommand}"></Button>
 			<BoxView HeightRequest="30"></BoxView>
 			<Button Text="Test Modal" Command="{Binding TestModal}"></Button>

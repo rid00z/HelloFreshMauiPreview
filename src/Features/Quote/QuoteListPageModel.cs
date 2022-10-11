@@ -47,7 +47,7 @@ namespace HelloFreshMauiPreview.Features.Quote
         public Command AddQuote {
             get {
                 return new Command (async () => {
-                    await CoreMethods.PushPageModel<QuotePageModel> ();
+                    await CoreMethods.PushPageModel<QuotePageModel> (vm => vm.Quote = new Quote());
                 });
             }
         }

@@ -30,9 +30,10 @@ namespace HelloFreshMauiPreview
             builder.Services.Add(ServiceDescriptor.Transient<QuoteListPageModel, QuoteListPageModel>());
             builder.Services.Add(ServiceDescriptor.Transient<QuotePageModel, QuotePageModel>());
 
-            builder.Services.UseFreshMvvm();
+            var mauiApp = builder.Build();
+            mauiApp.UseFreshMvvm();
 
-            return builder.Build();
+            return mauiApp;
         }
 	}
 }
